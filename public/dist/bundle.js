@@ -77,6 +77,10 @@
 	
 	var _home2 = _interopRequireDefault(_home);
 	
+	var _redirect = __webpack_require__(/*! ./components/redirect */ 250);
+	
+	var _redirect2 = _interopRequireDefault(_redirect);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	(0, _reactDom.render)(_react2.default.createElement(
@@ -88,7 +92,9 @@
 	    _react2.default.createElement(
 	        _reactRouter.Route,
 	        { path: '/inbox', component: _inbox2.default },
-	        _react2.default.createElement(_reactRouter.Route, { path: '/inbox/message', component: _message2.default })
+	        _react2.default.createElement(_reactRouter.Redirect, { from: 'message', to: 'redirect' }),
+	        _react2.default.createElement(_reactRouter.Route, { path: 'message', component: _message2.default }),
+	        _react2.default.createElement(_reactRouter.Route, { path: 'redirect', component: _redirect2.default })
 	    )
 	), document.getElementById('app'));
 
@@ -28577,6 +28583,62 @@
 	}(_react.Component);
 	
 	exports.default = Home;
+
+/***/ }),
+/* 250 */
+/*!******************************************!*\
+  !*** ./public/js/components/redirect.js ***!
+  \******************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Redirect = function (_Component) {
+	    _inherits(Redirect, _Component);
+	
+	    function Redirect() {
+	        _classCallCheck(this, Redirect);
+	
+	        return _possibleConstructorReturn(this, (Redirect.__proto__ || Object.getPrototypeOf(Redirect)).apply(this, arguments));
+	    }
+	
+	    _createClass(Redirect, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                null,
+	                _react2.default.createElement(
+	                    "h1",
+	                    null,
+	                    " this is redirect page! "
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Redirect;
+	}(_react.Component);
+	
+	exports.default = Redirect;
 
 /***/ })
 /******/ ]);
