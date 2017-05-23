@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Link} from "react-router"
 
-class Inbox extends Component{
+class Inbox extends Component {
     render() {
         return (
             <div>

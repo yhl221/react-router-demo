@@ -6,15 +6,18 @@ import App from "./components/App";
 import Inbox from "./components/inbox";
 import Message from "./components/message";
 import Home from "./components/home";
+import Redirect from "./components/redirect";
 
 
 render(
     <Router history={browserHistory}>
-        <Route path="/" component={App}/>
-        <IndexRoute components={Home}/>
-        <Route path="about" component={About}/>
-        <Route path="inbox" component={Inbox}>
-            <Route path="messages/:id" component={Message}/>
+        <Route path="/" component={App}>
+            <IndexRoute components={Home}/>
+            <Route path="about" component={About}/>
+            <Route path="inbox" component={Inbox}>
+                <Route path="inbox/messages" component={Message}/>
+            </Route>
         </Route>
     </Router>, document.getElementById('app'));
+
 

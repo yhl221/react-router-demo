@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Link} from 'react-router';
-import Home from "./home";
+
 
 class App extends Component {
 
