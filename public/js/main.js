@@ -1,12 +1,20 @@
-
-require("./../css/style.css");
 import React, {Component} from 'react';
 import {render} from "react-dom";
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import About from "./components/about";
+import App from "./components/App";
+import Inbox from "./components/inbox";
+import Message from "./components/message";
 
-class HelloMessage extends React.Component {
 
-    render() {
-        return <div>Hello</div>;
-    }
-}
-render(<HelloMessage />, document.getElementById('app'));
+
+render(
+    <Router history={browserHistory}>
+        <Route path="/" component={App}>
+            <Route path="about" component={About}/>
+            <Route path="inbox" component={Inbox}>
+                <Route path="messages/:id" component={Message}/>
+            </Route>
+        </Route>
+    </Router>, document.getElementById('app'));
+
