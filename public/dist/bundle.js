@@ -82,16 +82,13 @@
 	(0, _reactDom.render)(_react2.default.createElement(
 	    _reactRouter.Router,
 	    { history: _reactRouter.browserHistory },
+	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _App2.default }),
+	    _react2.default.createElement(_reactRouter.IndexRoute, { components: _home2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _about2.default }),
 	    _react2.default.createElement(
 	        _reactRouter.Route,
-	        { path: '/', component: _App2.default },
-	        _react2.default.createElement(_reactRouter.IndexRoute, { components: _home2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _about2.default }),
-	        _react2.default.createElement(
-	            _reactRouter.Route,
-	            { path: 'inbox', component: _inbox2.default },
-	            _react2.default.createElement(_reactRouter.Route, { path: 'messages/:id', component: _message2.default })
-	        )
+	        { path: 'inbox', component: _inbox2.default },
+	        _react2.default.createElement(_reactRouter.Route, { path: 'messages/:id', component: _message2.default })
 	    )
 	), document.getElementById('app'));
 

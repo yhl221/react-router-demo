@@ -10,12 +10,11 @@ import Home from "./components/home";
 
 render(
     <Router history={browserHistory}>
-        <Route path="/" component={App}>
-            <IndexRoute components={Home}/>
-            <Route path="about" component={About}/>
-            <Route path="inbox" component={Inbox}>
-                <Route path="messages/:id" component={Message}/>
-            </Route>
+        <Route path="/" component={App}/>
+        <IndexRoute components={Home}/>
+        <Route path="about" component={About}/>
+        <Route path="inbox" component={Inbox}>
+            <Route path="messages/:id" component={Message}/>
         </Route>
     </Router>, document.getElementById('app'));
 
