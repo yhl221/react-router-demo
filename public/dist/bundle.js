@@ -92,7 +92,7 @@
 	    _react2.default.createElement(
 	        _reactRouter.Route,
 	        { path: '/inbox', component: _inbox2.default },
-	        _react2.default.createElement(_reactRouter.Redirect, { from: 'message', to: 'redirect' }),
+	        _react2.default.createElement(_reactRouter.Redirect, { from: '/inbox/message', to: '/about' }),
 	        _react2.default.createElement(_reactRouter.Route, { path: 'message', component: _message2.default }),
 	        _react2.default.createElement(_reactRouter.Route, { path: 'redirect', component: _redirect2.default })
 	    )

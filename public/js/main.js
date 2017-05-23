@@ -15,7 +15,7 @@ render(
         <IndexRoute components={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/inbox" component={Inbox}>
-            <Redirect from="message" to="redirect"/>
+            <Redirect from="/inbox/message" to="/about"/>
             <Route path="message" component={Message}/>
             <Route path="redirect" component={RedirectPage}/>
         </Route>
