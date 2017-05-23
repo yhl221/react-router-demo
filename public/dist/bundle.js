@@ -28437,6 +28437,11 @@
 	    }
 	
 	    _createClass(Inbox, [{
+	        key: "Logout",
+	        value: function Logout() {
+	            _reactRouter.browserHistory.push('/'); //该方法可用于表单跳转和点击按钮跳转
+	        }
+	    }, {
 	        key: "render",
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -28470,7 +28475,12 @@
 	                        )
 	                    )
 	                ),
-	                this.props.children
+	                this.props.children,
+	                _react2.default.createElement(
+	                    "button",
+	                    { onClick: this.Logout.bind(this) },
+	                    "\u9000\u51FA"
+	                )
 	            );
 	        }
 	    }]);

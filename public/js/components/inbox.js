@@ -1,7 +1,13 @@
 import React, {Component} from "react";
-import {Link} from "react-router"
+import {Link} from "react-router";
+import { browserHistory} from 'react-router';
+
 
 class Inbox extends Component {
+    Logout(){
+        browserHistory.push('/')    //该方法可用于表单跳转和点击按钮跳转
+    }
+
     render() {
         return (
             <div>
@@ -12,6 +18,7 @@ class Inbox extends Component {
                     <li><Link to="/inbox/message">Message</Link></li>
                 </ul>
                 {this.props.children}
+                <button onClick={this.Logout.bind(this)}>退出</button>
             </div>
         )
     }
