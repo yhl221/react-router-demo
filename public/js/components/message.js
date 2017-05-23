@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 
-class Message extends Component{
-    render(){
-        return <h3>Message {/*{this.props.params.id}*/}</h3>
+class Message extends Component {
+    render() {
+        return <div>
+            Message {this.props.params.id}
+        </div>
     }
 }
 

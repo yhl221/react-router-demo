@@ -9,7 +9,9 @@ class Inbox extends Component {
                 {this.props.children || "Welcome to your Inbox"}
                 <ul>
                     <li><Link to="/">App</Link></li>
+                    <li><Link to="/inbox/message/:id">Message</Link></li>
                 </ul>
+                {this.props.children}
             </div>
         )
     }
