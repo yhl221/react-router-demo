@@ -73,6 +73,10 @@
 	
 	var _message2 = _interopRequireDefault(_message);
 	
+	var _home = __webpack_require__(/*! ./components/home */ 247);
+	
+	var _home2 = _interopRequireDefault(_home);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	(0, _reactDom.render)(_react2.default.createElement(
@@ -81,6 +85,7 @@
 	    _react2.default.createElement(
 	        _reactRouter.Route,
 	        { path: '/', component: _App2.default },
+	        _react2.default.createElement(_reactRouter.IndexRoute, { components: _home2.default }),
 	        _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _about2.default }),
 	        _react2.default.createElement(
 	            _reactRouter.Route,
