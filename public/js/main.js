@@ -9,15 +9,14 @@ import Home from "./components/home";
 
 
 render(
-    <Router history={hashHistory}>
-        <Route path="/" component={App}>
+    <Router history={browserHistory}>
+        <Route path="/" component={App}/>
             <IndexRoute components={Home}/>
             <Route path="/about" component={About}/>
             <Route path="/inbox" component={Inbox}>
-                <Route path="message/:id" component={Message}/>
-              {/*  <Redirect from="messages/:id" to="/messages/:id"/>*/}
+                <Route path="/inbox/message" component={Message}/>
             </Route>
-        </Route>
+
     </Router>, document.getElementById('app'));
 
 
