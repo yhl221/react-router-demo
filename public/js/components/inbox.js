@@ -5,7 +5,7 @@ import { browserHistory} from 'react-router';
 
 class Inbox extends Component {
     Logout(){
-        browserHistory.push('/')    //该方法可用于表单跳转和点击按钮跳转
+        browserHistory.push('/');    //该方法可用于表单跳转和点击按钮跳转
     }
 
     render() {
